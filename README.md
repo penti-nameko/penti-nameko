@@ -25,7 +25,7 @@ I'm a **Software Engineer** passionate about infrastructure and automation.
 
 ---
 
-# こんにちは、penti-nameko (réel) です！ 👋
+# こんにちは、penti-nameko (réel-りえる) です！ 👋
 
 **エンジニア**をしています。インフラ構築や自動化に情熱を注いでいます。
 
