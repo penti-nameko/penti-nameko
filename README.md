@@ -21,7 +21,7 @@ I'm a **Software Engineer** passionate about infrastructure and automation.
 ### 📬 Connect with me
 [![Twitter](https://img.shields.io/badge/Twitter-1DA1F2?style=flat-square&logo=twitter&logoColor=white)](https://twitter.com/nameko_simakaze)
 [![Twitter Secondary](https://img.shields.io/badge/Twitter-1DA1F2?style=flat-square&logo=twitter&logoColor=white)](https://twitter.com/e42_nanasi)
-[![Qiita](https://img.shields.io/badge/Qiita-55C500?style=flat-square&logo=qiita&logoColor=white)](https://qiita.com/aki-akatuki-namonakiheimin)
+[![Qiita](https://img.shields.io/badge/Qiita-55C500?style=flat-square&logo=qiita&logoColor=white)](https://qiita.com/rielu)
 
 ---
 
