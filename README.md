@@ -34,7 +34,7 @@ I'm a **Software Engineer** passionate about infrastructure and automation.
 * 🌱 今は **Python, C#, Kotlin, JS, Java, JSON** を勉強中です
 * 👯 **Discord bot制作** に関する相談に乗れます！お気軽にどうぞ
 * 💬 **Discord, k8s, インフラ** について気軽に聞いてください
-* ⚡ 特徴：**中性的**
+* ⚡ 特徴：一応中性ということにしといて
 
 ### 📬 リンク
 * Twitter: [@nameko_simakaze](https://twitter.com/nameko_simakaze) / [@e42_nanasi](https://twitter.com/e42_nanasi)
