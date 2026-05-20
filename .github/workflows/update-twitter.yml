@@ -1,0 +1,94 @@
+name: Update Latest Tweet
+
+on:
+  schedule:
+    # 毎日 JST 9:00 (UTC 0:00) に実行
+    - cron: '0 0 * * *'
+  workflow_dispatch:
+
+# ⚠️  Twitter API v2 の Bearer Token が必要です。
+#     GitHub リポジトリの Settings > Secrets > Actions に
+#     TWITTER_BEARER_TOKEN を追加してください。
+
+jobs:
+  update-twitter:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Fetch Latest Tweet
+        env:
+          TWITTER_BEARER_TOKEN: ${{ secrets.TWITTER_BEARER_TOKEN }}
+        run: |
+          python3 << 'EOF'
+          import urllib.request, urllib.parse, json, os, re
+
+          token    = os.environ["TWITTER_BEARER_TOKEN"]
+          username = "riel_hosiduki"
+
+          # ユーザーID取得
+          url = f"https://api.twitter.com/2/users/by/username/{username}"
+          req = urllib.request.Request(url, headers={"Authorization": f"Bearer {token}"})
+          with urllib.request.urlopen(req) as r:
+              user_id = json.load(r)["data"]["id"]
+
+          # 最新ツイート取得 (RT除く)
+          params = urllib.parse.urlencode({
+              "max_results": 5,
+              "exclude": "retweets,replies",
+              "tweet.fields": "created_at,public_metrics"
+          })
+          url2 = f"https://api.twitter.com/2/users/{user_id}/tweets?{params}"
+          req2 = urllib.request.Request(url2, headers={"Authorization": f"Bearer {token}"})
+          with urllib.request.urlopen(req2) as r:
+              tweets = json.load(r).get("data", [])
+
+          lines = []
+          for t in tweets:
+              tweet_id = t["id"]
+              text     = t["text"].replace("\n", " ")
+              date     = t["created_at"][:10]
+              likes    = t["public_metrics"]["like_count"]
+              rt       = t["public_metrics"]["retweet_count"]
+              url_tw   = f"https://twitter.com/{username}/status/{tweet_id}"
+              lines.append(f"- [{text[:80]}{'...' if len(text)>80 else ''}]({url_tw}) `{date}` ❤️{likes} 🔁{rt}")
+
+          md = "\n".join(lines) if lines else "_No recent tweets._"
+          with open("/tmp/twitter_section.md", "w") as f:
+              f.write(md)
+          print(md)
+          EOF
+
+      - name: Update README
+        run: |
+          python3 << 'PYEOF'
+          import re
+
+          with open('README.md', 'r') as f:
+              content = f.read()
+
+          with open('/tmp/twitter_section.md', 'r') as f:
+              section = f.read()
+
+          new_block = f"<!-- TWITTER:START -->\n{section}\n<!-- TWITTER:END -->"
+          content = re.sub(
+              r'<!-- TWITTER:START -->.*?<!-- TWITTER:END -->',
+              new_block,
+              content,
+              flags=re.DOTALL
+          )
+
+          with open('README.md', 'w') as f:
+              f.write(content)
+
+          print("README updated.")
+          PYEOF
+
+      - name: Commit & Push
+        run: |
+          git config user.name  "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add README.md
+          git diff --staged --quiet || git commit -m "chore: update latest tweet [skip ci]"
+          git push
