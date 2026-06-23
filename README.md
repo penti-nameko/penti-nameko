@@ -18,8 +18,10 @@
 <!-- アイコンの選択肢一覧：https://arc.net/l/quote/zizyykfh -->
 ## 🌱 Skills
 <img alt="my skills" src="https://skillicons.dev/icons?theme=dark&perline=7&i=html,css,js,ts,react,next,python,fastapi,go,docker,aws,gcp,kubernetes,nginx,kotlin,discordjs" />
+<br>
 ## 🔧Tools
-<img alt="Tools" src="https://skillicons.dev/icons?theme=dark&perline=7&i=apple,npm,ubuntu,vscode,windows,linux,androidstudio," />
+<img alt="Tools" src="https://skillicons.dev/icons?theme=dark&perline=7&i=apple,npm,ubuntu,vscode,windows,linux,androidstudio" />
+<br>
 ## ⛅other
 <img alt="other" src="https://skillicons.dev/icons?theme=dark&perline=7&i=cloudflare,mongodb,mysql" />
 <br>
