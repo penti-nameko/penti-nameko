@@ -24,7 +24,7 @@
 
 ## ⛅ other
 <img alt="other" src="https://skillicons.dev/icons?theme=dark&perline=7&i=cloudflare,mongodb,mysql" />
-<br>
+
 <!-- 4. GitHub usernameを変更, 2箇所 -->
 <!-- ライトモート：theme=light, ダークモート：theme=vue-dark  -->
 ## 🏃‍♀️ Activities
