@@ -1,6 +1,6 @@
 <!-- 1. GitHub usernameを変更 -->
 <div align="right">
-  <img src="https://komarev.com/ghpvc/?username=username" />
+  <img src="https://komarev.com/ghpvc/?username=penti-nameko" />
 </div>
 
 
@@ -9,7 +9,7 @@
 
 - 🧑‍💻 I'm a backend engineer.
 - 🌱 I’m currently learning go!
-- 📫 How to reach me: [Twitter - @username](https://twitter.com/riel_hosiduki)
+- 📫 How to reach me: [Twitter - @riel_hosiduki](https://twitter.com/riel_hosiduki)
 <br>
 
 
