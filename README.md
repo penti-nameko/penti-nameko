@@ -19,10 +19,10 @@
 ## 🌱 Skills
 <img alt="my skills" src="https://skillicons.dev/icons?theme=dark&perline=7&i=html,css,js,ts,react,next,python,fastapi,go,docker,aws,gcp,kubernetes,nginx,kotlin,discordjs" />
 ## 🔧Tools
-<img alt="my skills" src="https://skillicons.dev/icons?theme=dark&perline=7&i=apple,npm,ubuntu,vscode,windows,linux,androidstudio," />
+<img alt="Tools" src="https://skillicons.dev/icons?theme=dark&perline=7&i=apple,npm,ubuntu,vscode,windows,linux,androidstudio," />
 ## ⛅other
-<img alt="my skills" src="https://skillicons.dev/icons?theme=dark&perline=7&i=cloudflare,mongodb,mysql" />
-</br>
+<img alt="other" src="https://skillicons.dev/icons?theme=dark&perline=7&i=cloudflare,mongodb,mysql" />
+<br>
 <!-- 4. GitHub usernameを変更, 2箇所 -->
 <!-- ライトモート：theme=light, ダークモート：theme=vue-dark  -->
 ## 🏃‍♀️ Activities
